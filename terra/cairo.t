@@ -355,7 +355,7 @@ s.apply_alpha = terra(self: &cairo_surface_t, alpha: double)
 end
 
 --bitmap utils
-require'bitmaplib'
+require'terra/bitmap'
 terra C.cairo_bitmap_format(fmt: cairo_format_t)
 	return [enum](iif(fmt == CAIRO_FORMAT_A8,
 		BITMAP_G8, iif(fmt == CAIRO_FORMAT_ARGB32,
